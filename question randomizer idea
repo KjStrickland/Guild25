@@ -1,0 +1,52 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib> // for rand() and srand()
+#include <ctime>   // for time()
+#include <map>     // for storing questions and answers
+using namespace std;
+
+//Function to start our game
+void startGame() {
+	cout << "Welcome to the Labyrinth of Truths and Lies!" << endl;
+	cout << "In this labyrinth, you will encounter sentries who may either tell the truth or lie." << endl;
+	cout << "Your goal is to navigate through the labyrinth and reach the end by asking questions." << endl;
+
+}
+
+// Functions to generate a random question from a predefined set
+void questionRandomizerKelvin() {
+	// Array of questions
+	vector<string> questions = {
+		"Is the path to the left safe?",
+		"Is the sky blue?",
+		"Is 2 + 2 equal to 4?",
+		"Is this the right way to the treasure?",
+		"Are you a truthful sentry?"
+	};
+	// Generate a random index
+	int randomIndex = rand() % questions.size();
+	// Output the random question
+	cout << "You ask: " << questions[randomIndex] << endl;
+}
+
+void questionRandomizerCharlese() {
+	// Array of questions
+	vector<string> questions = {
+		"Is the path to the right safe?",
+		"Is water wet?",
+		"Is 5 > 3?",
+		"Is this the correct way to the exit?",
+		"Are you guarding the treasure?"
+	};
+	// Generate a random index
+	int randomIndex = rand() % questions.size();
+	// Output the random question
+	cout << "You ask: " << questions[randomIndex] << endl;
+}
+
+
+
+int main()
+{
+    std::cout << "Hello World!\n";
+}
