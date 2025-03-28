@@ -1,0 +1,784 @@
+import random
+import time
+
+maincharacter = "Kobe"
+#Kobe is a 19 year old teen from California.
+# He is 5'8 ft tall, weighs 152.0 lb, green eyes, black hair.
+# He loves going outdoors  for fun and adventure. 
+# He loves to live life like he is on the edge.
+#Kobe's art and characteristics are based on a younger version of Tom Cruise.
+sidecharacter1 = "John(Father)"
+#John is in his early 40's.
+#He is an outdoors men's and loves his kid more than his own life. 
+#He is kind to his allies and ruthless to his enemies. 
+# His character design is based on Joel from "the last of us".
+sidecharacter2 = "Joan(Mother)"
+#She is the mother of Kobe and wife of John; she died during labor so not much is known about her.
+sidecharacter3 = "Rick(??)"
+#I personally put him there cause he is my favorite character from Rick and morty.
+characterCompanion = "KaiserTheDog"
+wildanimal1 = "Big Ted(Grizzly Bear)"
+#I named him after Ted, the movie Ted.
+wildanimal2 = "Camper (Wolves)"
+#I was a thinker of C.O.D when I named him.
+wildanimal3 = "Scar (Snake)"
+#I named this because I was thinking of a scar.
+insect1 = "Bees"
+#Idk naruto
+insect2 = "Mosquitoes"
+#idk naruto 
+
+
+
+print("""!!!!!!!77!77!!!!!!!!!!!!!!777777??77!!!!?PPPPPPPPPPPPPP57!!!!!!!!77777?7777!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!7???????????7!!!!7??777?JJ?J?!!!!5PPPPPPPPYYPPPPP5J7!!!!!!777777777J??????7!!!777777????7!!!!
+!!!77!!7???777????7J!!7J????7?J7777?7?J5PPPPPPPP5775PPPPPPP55555555YJ?!!!!!777!7?7!7??77777777?7!!!!
+!!!7????7!!7777!!!!!7!!!!!!!!!!!!!YPPPPPPPPPPPPP????PPPPPPPPPPPPPP5YY5555555YY?7!!!?7!!7J?????7?Y777
+!!77777!!7!!!!!!7??Y55YYJ?J?????YYYY5PPPPPPYY5PY????YP5YYPPPPPPPYJ5PPPPPPPYJ55555J?7!!!!777!77!!7???
+!!7?77???J??!!7JPPPPPPP5JPPPPPPPPPP5JJYPPPPJ!7?5P55P5?7!JPPPPPPP5YYY5PPPPP5J5PPPPPPPY7!!!!!!7J?7?7!!
+!!!!!!!!!!!77J5PPPPPPYJYPPPPPPPPPPYJ55JPPPPJ!!P@Y??Y@P!!JPPPPPPPPPP5YYPPPPPPYJYPPPPPPP5J?JJ7!!777!!!
+J?77JY5JJ555PPPPPPP5JYPPPPPPPPPPPPPYY5YPPPY7?J@Y!77!Y@J?7YPPPPPPPPPPYJPPPPPPPPYJ5PPPPPP55Y5YJYYJYYYY
+PPPYYPPPYY5PPPPPPPPY?5PPPPPPPPPPPP5YJPPPPPY7JG#!P&&P!#GJ7YPPPPPPPYYYJ5PPPPPPPP5?YPPPPPPPP5?JPPPPPPPP
+PPPP5YYPP5YYPPPPPPPYYPPPPPPPPPPPPP55PPPPPPY!7BG!&55&!GB7!YPPPPPPPJ5P5YJPPPPPPPPYYPPPPPPPYY5JPPPPPPPP
+PPPPPPJPPPPYYPPPP5J5PPPPPPPPPPPPPPPPPPPPP5??!BP?@JJ@?PB!??5PP55YY5PPPPYY5PPPPPPP5J5PPPPYYP5JPPPPPPPP
+PPPPPPJPPPP5JPPPYJYY5PPPPPPPPPPPPPPPPPPPPY!J7GBJ&??&JBG7J!YP5Y5PPPPPPPP55PPPPPP5YYJYPPPJ5P5JPPPPPPPP
+PPPPPPYYPPP5JPYY5PP5YYYY5PPPPPPPPPPPPPPPP577J5#J&??&J#5J775PPPPPPPPPPPPPPPP5YYYY5PP5YYPJ5PJYPPPPPPPP
+PPPPPP5JPPP5JJ5PPPPPPPP5YYYPPPPPPPPPPPPP5?7775#J&??&J#5777?5PPPPPPPPPPPPPYYY5PPPPPPPP5JJ55JPPPPPPPPP
+PPPPPYJPPPP5JJ5PPPPPPPPPPPYYPPPPPPPPPPPPPJ!775#J&??&J#577!JPPPPPPPPPPPPPYYPPPPPPPPPPP5JJ55YY5PPPPPPP
+PPPP5J5PPPP5JPJ5PPPPPPPPPP5JPPPPPPPPPPPPPP7??5#J&??&J#5??7PPPPPPPPPPPPPPJ5PPPPPPPPPP5JPJ5PP5J5PPPPPP
+PPPPP55JYPPPYYJPPPPPPPPPPP5JPPPPPPPPPPPP5J77J5#?&YY&?#5J77J5PPPPPPPPPPPPJ5PPPPPPPPPPPJYYPPPPYJPPPPPP
+PPPPPPYY5PPPPJYY5PPPPPPPPPP5J5PPPPPPPPPPP?777P&7#YY#7&P777?PPPPPPPPPPP5J5PPPPPPPPPP5YYJPPPPPPYYPPPPP
+PPPPPPYY5PPP5JP5YJ5PPPPPPPPP5JYPPPPPPPPPP577!5&7#YY#7&5!775PPPPPPPPPPYJ5PPPPPPPPP5JY5PJ5PPPPPP5JPPPP
+PPPPPPPP5YYPJ5PP5JPPPPPPPPPPPPJ5PPPPPPPPPY??!5&7#YY#7&5!??YPPPPPPPPP5JPPPPPPPPPPPPJ5PP5JPPPPPPPYPPPP
+PPPPPPPP5J55?PPP5JPPPPPPPPPPPP5JPPPPPPPPPJ7??5&7&YY&7&5??7JPPPPPPPPPJ5PPPPPPPPPPPPJ5PPP?YPPPPPPPPPPP
+PPPPPP5?5PPYYPPPPJ5PPPPPPPPPPPPJ5PPPPPPPP57!?P&!BGGB!&P?!75PPPPPPPP5JPPPPPPPPPPPP5JPPPPYYPPPPPPPPPPP
+PPP5YYYYPPPPYJPPPJ5PPPPPPPPPPPP5J5PPPPPPPY777BB!PBBP7&B777YPPPPPPP5J5PPPPPPPPPPPP5JPPPJYPPPPPP5PPPPP
+J^^~?JJ5PPPPPJPPP5J5PPPPPPPPPPP5YJPPPPPPPJ7J7BP~P&&57#B7J7JPPPPPPPJY5PPPPPPPPPPP5J5PPPJPPPP5J^ :7?JP
+   .:  .?PPPJYPPPP5J5PPPPPPPPPPPPPPPPPPPPPYJ!BG!J@@J?&B!JYPPPPPPPPPPPPPPPPPPPPP5J5PPPP5Y?:.^^7~    ?
+   .~?~: ~?YJPPPPPP5JPPPPPPPPPPPPPPPPPPPPPY??P&!?&&7J@P??YPPPPPPPPPPPPPPPPPPPPPJ5PPPP5Y?:  .^:      
+     .:~~~~!7?YPPPPY?PPPPPPPPPPPPPPPPPPPPY!!?P&!7&&7Y@P?!!YPPPPPPPPPPPPPPPPPPPP?YPPPJ7777!~~~!!~^~!!
+!!!!!!!777777?77?YPY5PPPPPPPPPPPPPPPPPPPP5J7!Y@?!BB7G@Y!7J5PPPPPPPPPPPPPPPPPPPP5YPPY777777777777?777
+777777??77777Y55J75PPPPPPPPPPGBGGPPPPPPPPPP5Y?#5!BBYB#?Y5PPPPPPPPPPGGBGPPPPPPPPPPY777J557777777?G777
+77?777?P57777775G!7YPPPPPPPB&#PG#&BGPGGGGGGGBGB&#GB&&BGBGGGGGGGPGB&#GP#&BPPPPPPPPJ!5??GY77777777GP77
+7?5G7777YG77777YGP?7?YPPPP&BJJYJ7JPB&#PPB@&&#&@&J??J&@&#&&@BPG#&BPJ7JYJ5#&PPPPPP5775PGJ!7777P777YGP7
+7775G?777P?77777YB?777J5PP@GJ??JYPPP&@##&#5YYY&#?YY5&&55PG#&##@&PPPYJ555B@PPPPP5?777???777775PY7575G
+777!5P777777?J77?YBJ777?PPG#&#G##BGGGGGBBGBBBBB#@BB@#BBBBBGBBGGGGGB#&B##BGPPPJ?7777P55Y777777755!77J
+77777P577777?YPY7!JB5777YPPPPGGPPPPPPPPPPPPPPPPG@?Y@GPPPPPPPPPPPPPPPPGGPPPPPY77777JB77777777777G?777
+777JJ7?77777777PP?7755777YPPPPPPPPPPPPPPPPPPPPPB@?Y@BPPPPPPPPPPPPPPPPPPPPPPPJ775555?77777777777JG?77
+Y5P5GP!777777777Y55YJ5JJ77?5PPPGBBBBBBBBBGGBBBG#@##@#PPGGBGPPPPPPPGBBBBGGGPJ777577777?J?7777777!????
+YYJJYBYJ??JYY5P55GPYYYYJ777?BB#G55YYYYYYPPPG5JJG@@@@GJJJJYGBGGGGGBBP5P5Y5BGYJ?77777J5BBGPYJJJJ5PG55P
+JJJJJYY5555YYYJJJYYY55555555GYJJJJJJJJJJJJJJJJJG&YY@GJJJJJJJYYYYJJJJJJJJJJYY555YYY5PYJJJJYYY5YYYYJJJ
+JJJJJJJJJJJJJJJJJJJJJJJJJJJJJYYJJJJJJJYYY5YJJJJ##7Y&#JJJJJJJJJJJJYYYY5YYJJJJJJJJJYYJJJJJJJJJJJJJJJJJ
+JYY55YYJJJJYYYYY5YJJJYY5YYYYYYYJJJJYY55YJJJJJJY&&##&&YJYY5YYYJYYYYYJJJYYYYYY55YJJYY5YYYYYYYYY5YYYYJJ
+Y5YJJJJYYYYYYYYYJJJYYYYJJJJJJJJJJY5YYJJJJJJJJJP@#&&#@PJJJJYYYY5YYYY5YJJJJJJJJYYJJJJJYYYYYJY55YJJY5YJ
+JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJG@B7YB@GJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
+JJ5YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY5G@GJ5B@GJJJJJJ5YYYYYYYJJJJJYYYYYYJJJJJYYYYYYYYYYYYYJJJ
+JJ5JJBPJGJJGYGG5GYGGJJJ5GPYPPP5G5G5BPJPP5G5GP5G@&&&&@PJJJJJJYYYYYYJY5YJJJJJYYYYYY5YYYYYYYYYYYYYY55YY
+JJ5JPB#YBJJB5#B5PPB#5Y5JGYJGGGGBPPGB#YGYJYJGY5G@#GG#@PJJJJJJJJJJJJJJY5YJJJJJJJJJJJJJJJJY5YJJJJJJJJJJ
+JJ5YBY5GB5YB5BGJJG55BYYYB55GJJBBJJB5PGG5YPJGY5&G7JJJB#JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
+JJ555YY5PPP5Y55YY5YY5YYPPP55YY55Y5PYYPPPPPYP55##YGPP&#JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ""")
+
+
+print("""   ____  _      ____  __ __   ____                 ____  ___ ___  ____    ____    __ ______ 
+ /    T| T    |    \|  T  T /    T               l    j|   T   T|    \  /    T  /  ]      T
+Y  o  || |    |  o  )  l  |Y  o  |     _____      |  T | _   _ ||  o  )Y  o  | /  /|      |
+|     || l___ |   _/|  _  ||     |    |     |     |  | |  \_/  ||   _/ |     |/  / l_j  l_j
+|  _  ||     T|  |  |  |  ||  _  |    l_____j     |  | |   |   ||  |   |  _  /   \_  |  |  
+|  |  ||     ||  |  |  |  ||  |  |                j  l |   |   ||  |   |  |  \     | |  |  
+l__j__jl_____jl__j  l__j__jl__j__j               |____jl___j___jl__j   l__j__j\____j l__j  
+                                                                                            """)
+#Start the storyline here
+print("""  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.   .----------------.   .----------------. 
+          | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. | | .--------------. | | .--------------. |
+          | |     ______   | || |  ____  ____  | || |      __      | || |   ______     | || |  _________   | || |  _________   | || |  _______     | | | |              | | | |     __       | |
+          | |   .' ___  |  | || | |_   ||   _| | || |     /  \     | || |  |_   __ \   | || | |  _   _  |  | || | |_   ___  |  | || | |_   __ \    | | | |      _       | | | |    /  |      | |
+          | |  / .'   \_|  | || |   | |__| |   | || |    / /\ \    | || |    | |__) |  | || | |_/ | | \_|  | || |   | |_  \_|  | || |   | |__) |   | | | |     (_)      | | | |    `| |      | |
+          | |  | |         | || |   |  __  |   | || |   / ____ \   | || |    |  ___/   | || |     | |      | || |   |  _|  _   | || |   |  __ /    | | | |      _       | | | |     | |      | |
+          | |  \ `.___.'\  | || |  _| |  | |_  | || | _/ /    \ \_ | || |   _| |_      | || |    _| |_     | || |  _| |___/ |  | || |  _| |  \ \_  | | | |     (_)      | | | |    _| |_     | |
+          | |   `._____.'  | || | |____||____| | || ||____|  |____|| || |  |_____|     | || |   |_____|    | || | |_________|  | || | |____| |___| | | | |              | | | |   |_____|    | |
+          | |              | || |              | || |              | || |              | || |              | || |              | || |              | | | |              | | | |              | |
+          | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' | | '--------------' | | '--------------' |
+          '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'   '----------------'   '----------------' """)
+print("\nIt was early in the warm summer morning of Michigan in 2013.\n Kobe was very excited that morning because it was their 4th of July Game night, that Kobe always looked forward to.\n Kobe used to go camping on the 4th of July, but this all changed when his mom disappeared. Kobe being only five at the time, kept playing games on his mom's tablet in the back of his parents small air conditioned car. While Kobe’s father John was driving to the small campsite with his mother in the passenger seat.\n The drive was going smooth until a barreling car came swinging around the dirt road, rocks and dust was drifting up from the tires on this car.\n Kobe’s father John suspected that it was a drunk driver so John was going to drive slowly to not intervene with this crazy driver, but this was not the case.\n As John started to slowly drive towards this crazy barreling car, the barreling car swerved and hit John’s car, everything went black.\n12 years later.")
+time.sleep(5)
+
+survivalpoints = 0
+survivalpoints = random.randint(6, 15)
+#Note you have to type in the exact same gear as provided
+
+choices = ["Get the game night supplies", "Go off on your very own adventure"]
+choices2 =["Take the Picture", "Leave the Picture"]
+
+while True:
+  print ("\nTips!! you have to type in the exact same gear as provided\n you could also type 1 for the first one or 2 for the second one") 
+  print ("Kobe wakes up early on July 4th, 2025 to prepare for  game night. He's been dreading playing ever since the Accident.\n")
+  time.sleep(3)
+  print(sidecharacter1,":Kobe!!")
+  time.sleep(1)
+  print(maincharacter,": What's up dad?")
+  time.sleep(1)
+  print(sidecharacter1,": Don't forget to get the game night supplie, okay .")
+  time.sleep(3)
+  print(maincharacter," hear's his father calling his name from the living room screaming at him to finish setting up for game night.")
+  time.sleep(3)
+  print(maincharacter,":What should I do?", choices)
+  time.sleep(3)
+  userschoice = input() or int(input())
+  if userschoice == choices[0] or 1:
+    print(""""You chose to bring Standard camping equipment which includes A Tent(with all supplies needed).
+              Sleeping Bag and Sleeping Pad. 
+              A Small Pillow. 
+              2 Flashlights with extra batteries.
+              Camping chairs.
+              Clothing items.""")
+    time.sleep(3)
+    print(maincharacter,"\n:Hey dad am done setting up for game night.")
+    time.sleep(3)
+    survivalpoints -= 3
+    print("You got", survivalpoints, "survival points for setting up for game night.")
+    time.sleep(2)
+    break 
+  elif userschoice == choices[1] or 2:
+    print("You chose to go explore your home like an unsolved mystery.")
+    time.sleep(3)
+    print("You got", survivalpoints, "survival points for choosing to explore your home.")
+    time.sleep(2)
+    time.sleep(3)
+    print(maincharacter,": Can I bring the family album.")
+    time.sleep(2)
+    print(maincharacter," sees a picture fall from the album.")
+    time.sleep(2)
+    print(maincharacter," finds a picture in your fathers storage, should he take it?\n")
+    time.sleep(3)
+    userschoice = input() or int(input())
+    if userschoice == choices2[0] or 1:
+      print(maincharacter,": Why is everyone except mom's dace crossed out.")
+      time.sleep(3)
+      print(maincharacter,": This pictures weirds me out, I think am gonna keep it.")
+      time.sleep(3)
+      print(maincharacter,": I think I'm gonna keep looking through dads stuff.")
+      time.sleep(3)
+      survivalpoints -= 2
+      print("You got", survivalpoints, "survival points for packing your items.")
+      time.sleep(2)
+      break
+    elif userschoice == choices2[1] or 2:
+      print(maincharacter,": This picture is creepy, I think, I'll just leave it.")
+      time.sleep(3)
+      print(maincharacter,": Lets go see what dad is up to.")
+      time.sleep(3)
+      print(maincharacter," heads down stairs.")
+      time.sleep(3)
+      print("You got", survivalpoints, "survival points for packing your items.")
+      time.sleep(2)
+      break  
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+
+
+print("Kobe grabs his bag and heads down stairs to find his dad. Kobe’s dad needs help packing the car.")
+choices = ["Help dad pack up car","Go sit in the car with your dog Kaiser"]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Do you choose help kobes dad or not?\n",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("You choose to help your dad. You grab your bag and go put it in the back of your fathers car.")
+    print("You got",survivalpoints)
+    break
+  elif userschoice == choices[1]:
+    print("You chose not to help your dad which makes him a little frustrated with you. You instead go sit in the car with your dog Kaiser while you wait for your dad to pack up the car.")
+    print("You got",survivalpoints)
+    break
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+
+
+
+print("Kobe and his dad are heading to the camp and they start to get hungry.")
+choices = ["Stop to get food at a old diner", "Keep going and eat later at the camp"]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Would you like to stop and get food or wait to eat at the camp?\n",choices) 
+  userschoice = input(".\n")
+  if userschoice == choices[0]:
+    print("You chose to stop and eat at the old diner, it was not that good you left unsatisfied.")
+  elif userschoice == choices[1]:
+    print("Keep going and eat later at the camp? You chose to wait till you get to the camp to eat. You keep heading toward the camp.")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print(""" .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.   .----------------.   .----------------.   .----------------. 
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. | | .--------------. | | .--------------. | | .--------------. |
+| |     ______   | || |  ____  ____  | || |      __      | || |   ______     | || |  _________   | || |  _________   | || |  _______     | | | |              | | | |              | | | |    _____     | |
+| |   .' ___  |  | || | |_   ||   _| | || |     /  \     | || |  |_   __ \   | || | |  _   _  |  | || | |_   ___  |  | || | |_   __ \    | | | |      _       | | | |    ______    | | | |   / ___ `.   | |
+| |  / .'   \_|  | || |   | |__| |   | || |    / /\ \    | || |    | |__) |  | || | |_/ | | \_|  | || |   | |_  \_|  | || |   | |__) |   | | | |     (_)      | | | |   |______|   | | | |  |_/___) |   | |
+| |  | |         | || |   |  __  |   | || |   / ____ \   | || |    |  ___/   | || |     | |      | || |   |  _|  _   | || |   |  __ /    | | | |      _       | | | |    ______    | | | |   .'____.'   | |
+| |  \ `.___.'\  | || |  _| |  | |_  | || | _/ /    \ \_ | || |   _| |_      | || |    _| |_     | || |  _| |___/ |  | || |  _| |  \ \_  | | | |     (_)      | | | |   |______|   | | | |  / /____     | |
+| |   `._____.'  | || | |____||____| | || ||____|  |____|| || |  |_____|     | || |   |_____|    | || | |_________|  | || | |____| |___| | | | |              | | | |              | | | |  |_______|   | |
+| |              | || |              | || |              | || |              | || |              | || |              | || |              | | | |              | | | |              | | | |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' | | '--------------' | | '--------------' | | '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'   '----------------'   '----------------'   '----------------'  """)
+
+print("""@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@&##############&&#########################################&&&&&##&######&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@GY55555555YJYYY??JJJJJJY55555555555555555555555555PY?77?JJ!^~7??J?JP555Y#@@@@@@@@@@@@@@
+@@@@@@@@@@@@@G5555555G57^^~!!!!~:^?7JP55555555J?77?Y555555555555555P55PYJ?JY55Y555555#@@@@@@@@@@@@@@
+@@@@@@@@@@@@@G5555555555P555555555PP555555555!^^^~^~J5YYY5555J!^.^~~^^!555555YP555555#@@@@@@@@@@@@@@
+@@@@@@@@@@@@@G55555PJ:.:Y5YY555PYJ!!~:^!!~~?Y~~~!~^7?7:::^::....^~~~!775555J:.~J55555#@@@@@@@@@@@@@@
+@@@@@@@@@@@@@G555PY!: . ^^ :YG555YYY5J!777^^~?J7?~!75555YJ??JY55555555555P5:..: :!!?P#@@@@@@@@@@@@@@
+@@@@@@@@@@@@@G555YJ?JJ7!JJ7JY5P5555555555555555555555555555555555555555PP5YY?7Y??YYYJ#@@@@@@@@@@@@@@
+@@@@@@@@@@@@@PJY5YY55YYYYJYJYYYY55P5555555555555555555555555555555PP5PP5JJJJ55Y555YJJB@@@@@@@@@@@@@@
+@@@@@@@@@@@@@PJJYY55YJYPP5YYYY5Y55Y5P555555555555555555555555555PPYYYYYP5YJJYP5YYY5YJB@@@@@@@@@@@@@@
+@@@@@@@@@@@@@PJJJJJJJJJYYYYYYJJYYYJJYY555PP55555555555555555P555YYJY5Y5YYJJJYYJJJYPYJB@@@@@@@@@@@@@@
+@@@@@@@@@@@@@BGGGGGGGGGGGGGGPPPPPPGGBBBBBGB#BBGGGPGGBBBBGBBB#BGGPPPPPPGGGGGGGGGGGGGGG&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@#GGBGGGGGGGGGGBBBB?GB####B##B##BG5Y55JY5GB#BB#B##B#BBYYBBBGGGGGGGGGGGGGG&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@#GGBPP5YY555GBBBBBYGBGGGBGBGP5Y5JJJY5YYJY5Y5PGGBGGBB#55BB#BPPPJYPPPBGGGG&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@#GGGBBB7YBGBBBBBBB7PGGGGPGPJJJJJYYJ5PY55Y5JJJYPPGGGGBYYBGGBBBB7YBGGGGGGG&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@#GGGGGB7YBGGGGGGGBJGGP5YJYYJJJY5555P5JJJJ555PGGP55PPG55BGGGPGB7YBGGGGGGG&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@#B#BGGB7JBGGGGGGGGYPYJJJJYYJJJJJJJJYYJJYPPPGPPB5GG5PP5PGGBBGGB7YBGGGGGGG&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@&&&#BGB?5BBBGP5YJJYYJJY555YJJJJJJYY55YJYPGP5JYYJJPPG5YYJJY5PGBJ5BGGGGGGG&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@##BBGGBYPG5YYJJJJJJJJJJYYJJJJJJJYYY55JY5JPPYYP55JYP5JJYYYYJJYPJ5BBGGGGGG&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@BGGGGPGY5YJJJJJJJJJJJYYY55YYJJJJJJJY5JJ5YJG#BP5B##PJJYY55YJJY5Y5Y5PGGBGG&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@#BGP5YYYYYYYYYYYYYYYYYYYYYYYYYYYYYY55YYYYY555YY555YYYYYYYYYYYYYYYYYY5PGB&@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@""")
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+print("""""")
+
+
+print(""".----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.   .----------------.   .----------------.   .----------------. 
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. | | .--------------. | | .--------------. | | .--------------. |
+| |     ______   | || |  ____  ____  | || |      __      | || |   ______     | || |  _________   | || |  _________   | || |  _______     | | | |              | | | |              | | | |    ______    | |
+| |   .' ___  |  | || | |_   ||   _| | || |     /  \     | || |  |_   __ \   | || | |  _   _  |  | || | |_   ___  |  | || | |_   __ \    | | | |      _       | | | |    ______    | | | |   / ____ `.  | |
+| |  / .'   \_|  | || |   | |__| |   | || |    / /\ \    | || |    | |__) |  | || | |_/ | | \_|  | || |   | |_  \_|  | || |   | |__) |   | | | |     (_)      | | | |   |______|   | | | |   `'  __) |  | |
+| |  | |         | || |   |  __  |   | || |   / ____ \   | || |    |  ___/   | || |     | |      | || |   |  _|  _   | || |   |  __ /    | | | |      _       | | | |    ______    | | | |   _  |__ '.  | |
+| |  \ `.___.'\  | || |  _| |  | |_  | || | _/ /    \ \_ | || |   _| |_      | || |    _| |_     | || |  _| |___/ |  | || |  _| |  \ \_  | | | |     (_)      | | | |   |______|   | | | |  | \____) |  | |
+| |   `._____.'  | || | |____||____| | || ||____|  |____|| || |  |_____|     | || |   |_____|    | || | |_________|  | || | |____| |___| | | | |              | | | |              | | | |   \______.'  | |
+| |              | || |              | || |              | || |              | || |              | || |              | || |              | | | |              | | | |              | | | |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' | | '--------------' | | '--------------' | | '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'   '----------------'   '----------------'   '----------------' """)
+
+
+print("""@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@@@@@@
+@@@@@B7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777B@@@@@
+@@@@@B!77777777777777777777777777777777777777777777777777777777777777777777777777777777777777!B@@@@@
+@@@@@B7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777B@@@@@
+@@@@@B7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777B@@@@@
+@@@@@B7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777B@@@@@
+@@@@@B777777777777777777777777777777777777777777777777777777777777?777777777777777777777777777B@@@@@
+@@@@@B77777777777777777777777777?77?J5GGBJ7777777777777777777777YGBGJ!777777777777777777777777B@@@@@
+@@@@@B77777777777777777777777JY5JJYBBBBP5?77777777777777777YY5PGBBBBG5J?7777777777777777777777B@@@@@
+@@@@@B77777777777777777777?75PYJ??YBBY?7777777777777777777?BB#B#GGBBBB#G?777777777777777777777B@@@@@
+@@@@@B7777777777777777777?GGGYJJ???JY7!7777777777777777777PGBBBB#GBBB#BBP777777777777777777777B@@@@@
+@@@@@B77777777777777777777?5GBPYYJ??JYY??77777777777?JJJJJ5YB#BBBGBBB#BBYJYJ?77777777777777777B@@@@@
+@@@@@B7777777777777777777?7??5BBGPJ?5JPJ?J???77777?JY?77?5YJ55GPPPPGGBG5YYY5JY?777777777777777B@@@@@
+@@@@@B77777777777777777???7!77?5BB5YJJ5Y77??JJJJJJ??777?5YJ5?7YJYJJYYYJ?5JJ577Y?77777777777777B@@@@@
+@@@@@B77777777777777???JY?777777??J#GGYYJ7777777777777?5YJJ5Y?7?????JJJ5YJJYY775?7777777777777B@@@@@
+@@@@@B777777777777??JYYJ77777777777?JJJYY????77777777J5BJJJJYYYYYYYYYYYYYYYY577?Y7777777777777B@@@@@
+@@@@@B777777777?~7YYJ?7777777777777777777??JJJJJJ??JJJYGJJ55YYYYYYYYYYYYYYYP5?77JJ777777777777B@@@@@
+@@@@@B77777777?J?Y?77777777777777777777777777777777777555JPYJY5YYY55555555555?777Y?77777777777B@@@@@
+@@@@@B77777777?Y?7777777777777777777777777777777777777YY5J5YYPGYYYYYJY5JJJJ5PJJ77YJ77777777777B@@@@@
+@@@@@B77777777??7777777777777777777777777777777777777775PJ5JJ5JJJJJY5P5JJJJ55YYJJJ777777777777B@@@@@
+@@@@@B777777777?777777777777777777777777777777777777777?GY5JJJJJ5YYYYYJJJJJ5Y5JP?7777777777777B@@@@@
+@@@@@B777777777?777777777777777777777777777777777777777JGJPJJJJJYYY5JYYYPYJPJ5?Y?7777777777777B@@@@@
+@@@@@B7777777775?77777777777777777777777777777777777777Y5JY5YJJ55P5G5P5Y5555Y5??Y7777777777777B@@@@@
+@@@@@B777777777J77777777777777777777777777777777777777J?5P?JYYYYYYY55YYYYY5JJ?7JJ7777777777777B@@@@@
+@@@@@B777777777J77777777777777777777777777777777777777?JJYJJJJJJJJJJYJJJ???7?YGJ77777777777777B@@@@@
+@@@@@B77777777JJ777777777777777777777777777777777777777?BP5555555PPPP5555PPGGBB577777777777777B@@@@@
+@@@@@B77777777?Y7777777777777777777777777777777777777777GBBB#BBBBBBBB#BBBB#BBBBBJ7777777777777B@@@@@
+@@@@@B77777777JJ7777777777777777777777777777777777777777GBGB#BBB#BGGB#BBGBBBBB##Y7777777777777B@@@@@
+@@@@@B77777777??77777777777777777777777777777777777777775BBBBBBBBBBBB#BBBBBBBBBG?7777777777777B@@@@@
+@@@@@B777777777Y7777777777777777777777777777777777777777PBBBGBBBGBBBB#BBBBBBBBBP77777777777777B@@@@@
+@@@@@G!77777777J77777777777777777777777777777777777777!YBGGGGGGGGGGBB#GGGGGGGGGB?!77777777777!G@@@@@
+@@@@@&GGGGGGGGB#GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG#&&&&&&&&&&&&&&&&&&&&&&&&#GGGGGGGGGGGGG&@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@""")
+
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+print(""" .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.   .----------------.   .----------------.   .----------------. 
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. | | .--------------. | | .--------------. | | .--------------. |
+| |     ______   | || |  ____  ____  | || |      __      | || |   ______     | || |  _________   | || |  _________   | || |  _______     | | | |              | | | |              | | | |   _    _     | |
+| |   .' ___  |  | || | |_   ||   _| | || |     /  \     | || |  |_   __ \   | || | |  _   _  |  | || | |_   ___  |  | || | |_   __ \    | | | |      _       | | | |    ______    | | | |  | |  | |    | |
+| |  / .'   \_|  | || |   | |__| |   | || |    / /\ \    | || |    | |__) |  | || | |_/ | | \_|  | || |   | |_  \_|  | || |   | |__) |   | | | |     (_)      | | | |   |______|   | | | |  | |__| |_   | |
+| |  | |         | || |   |  __  |   | || |   / ____ \   | || |    |  ___/   | || |     | |      | || |   |  _|  _   | || |   |  __ /    | | | |      _       | | | |    ______    | | | |  |____   _|  | |
+| |  \ `.___.'\  | || |  _| |  | |_  | || | _/ /    \ \_ | || |   _| |_      | || |    _| |_     | || |  _| |___/ |  | || |  _| |  \ \_  | | | |     (_)      | | | |   |______|   | | | |      _| |_   | |
+| |   `._____.'  | || | |____||____| | || ||____|  |____|| || |  |_____|     | || |   |_____|    | || | |_________|  | || | |____| |___| | | | |              | | | |              | | | |     |_____|  | |
+| |              | || |              | || |              | || |              | || |              | || |              | || |              | | | |              | | | |              | | | |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' | | '--------------' | | '--------------' | | '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'   '----------------'   '----------------'   '----------------' """)
+
+
+print("""@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@&#################################################################################@@@@@@@@@@@
+@@@@@@@7 .............................................................................. :&@@@@@@@@@@
+@@@@@@@! JP55P~                                                                 .5555PJ .&@@@@@@@@@@
+@@@@@@@! 5BGGBY!!!!!!!777777777777777777777777777777777777777777777777!!!!!!!!!!7BGGGB5 .&@@@@@@@@@@
+@@@@@@@! 5BGGBY777777?GPGGGPPGGPPGGGGBGPGPPGPPPGPPGGPGGPPGGGPPPPPPPPPPP777777777?BGGGB5 .&@@@@@@@@@@
+@@@@@@@! 7YBBBP555J77?GPGGPPGGGGGPPGBGPPGGGGGGBBPPGBPGGGPPBPPPPPPPPPPPP7777777555BBBB57 .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB57??JJJYYYYJJYJJJJYJJJJYYJJJYJYJYYYJJJYYYYJJJJJJJJJYJ??????JBGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB7..........................................................^GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB!                                              ..........  .GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB!^BBBBGGBBBB?       .7??????????????????!     Y####BB###B~ .GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB!~&@@@&&@@@@Y       .#@@@@@@@@##@@@@@@@@5     5@&&&&&&&&@! .GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB!^&@&@##@&&@J       .B@@@@@@@@B#@@@@@@@&Y     5@@@@&&@@@&! .GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB! ^^^^^^^^^^:       .B@@@@@@@@B#@@@@@@@&Y     :^^^^^^^^^^. .GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB!                   .B@@@@@@@@B#@@@@@@@&Y                  .GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB!                   .B@@@@@@@@B#@@@@@@@&Y                  .GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB!                   .B@@@@@@@@B#@@@@@@@&Y                  .GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB!                   .B@@@@@@@@B#@@@@@@@&Y                  .GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .GGGGGGB!                   :B&&&&&&&&B#&&&&&&&#Y                  :GGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  :BBBGGGBG5555555555555555555PBBBBBBBBBBBBBBBBBBBG555555555555555555PBGGGGGB!  .&@@@@@@@@@@
+@@@@@@@!  .YYY5BBBBBBBBBBBBBBBBBBBBBBBBGGGGGGGGGGGGGGGGGGGGBBBBBBBBBBBBBBBBBBB#BBBPY5~  .&@@@@@@@@@@
+@@@@@@@!      .555555555555555555555555555555555555555555555555555555555555555555P~     .&@@@@@@@@@@
+@@@@@@@7 ...............................................................................:&@@@@@@@@@@
+@@@@@@@&#################################################################################@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+""")
+
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
+
+print("")
+choices = [""]
+#Note you have to type in the exact same gear as provided
+while True:
+  print ("Note you have to type in the exact same gear as provided",choices) 
+  userschoice = str(input(".\n"))
+  if userschoice == choices[0]:
+    print("")
+  elif userschoice == choices[1]:
+    print("")
+  else:
+    print("You have to choose, or else you might not live to see tommorrow.")
+  break
