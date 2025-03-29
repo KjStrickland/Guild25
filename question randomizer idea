@@ -2,51 +2,114 @@
 #include <vector>
 #include <cstdlib> // for rand() and srand()
 #include <ctime>   // for time()
-#include <map>     // for storing questions and answers
 using namespace std;
 
-//Function to start our game
-void startGame() {
-	cout << "Welcome to the Labyrinth of Truths and Lies!" << endl;
-	cout << "In this labyrinth, you will encounter sentries who may either tell the truth or lie." << endl;
-	cout << "Your goal is to navigate through the labyrinth and reach the end by asking questions." << endl;
 
+//resuse this function 3 more times and everyone can add their personal questions
+//remember to change the function name each time, like going down a list
+//implement that in the main as well//
+// Function to handle question selection, answer validation, and score/life management
+static int askRandomQuestion1() {
+    // Define two sets of questions
+    vector<string> questionsSet1 = { "I was Team Captain", "I drove past the speed limit" };
+    vector<string> questionsSet2 = { 
+        "Is the path to the right safe?", 
+        "Is water wet?", 
+        "Is 5 > 3?", 
+        "Is this the correct way to the exit?", 
+        "Are you guarding the treasure?" 
+    };
+
+    // This code merges both question sets into one
+    vector<string> allQuestions = questionsSet1;
+    allQuestions.insert(allQuestions.end(), questionsSet2.begin(), questionsSet2.end());
+
+    // Randomly select a question
+    srand(time(0));
+    int randomIndex = rand() % allQuestions.size();
+    cout << "It asks: " << allQuestions[randomIndex] << " \n[type 'T' for Truth] or [type 'F' for False]" << endl;
+
+    // Randomly generate a true or false response
+    vector<string> answers = { "T", "F" };
+    int randomAnswerIndex = rand() % answers.size();
+
+    // User input
+    string userAnswer;
+    cin >> userAnswer;
+
+    // Compare user input with generated answer
+    if (userAnswer == answers[randomAnswerIndex]) {
+        cout << "Congratulations! You have cleared one path.\n";
+        return 10; // Accumulate 10 points for a correct answer
+    } else {
+        cout << "Sorry, wrong answer.\n";
+        return -1; // Deduct one life for a wrong answer
+    }
 }
 
-// Functions to generate a random question from a predefined set
-void questionRandomizerKelvin() {
-	// Array of questions
-	vector<string> questions = {
-		"Is the path to the left safe?",
-		"Is the sky blue?",
-		"Is 2 + 2 equal to 4?",
-		"Is this the right way to the treasure?",
-		"Are you a truthful sentry?"
-	};
-	// Generate a random index
-	int randomIndex = rand() % questions.size();
-	// Output the random question
-	cout << "You ask: " << questions[randomIndex] << endl;
-}
+//static int askRandomQuestion2()
+//static int askRandomQuestion3()
+//static int askRandomQuestion4()
 
-void questionRandomizerCharlese() {
-	// Array of questions
-	vector<string> questions = {
-		"Is the path to the right safe?",
-		"Is water wet?",
-		"Is 5 > 3?",
-		"Is this the correct way to the exit?",
-		"Are you guarding the treasure?"
-	};
-	// Generate a random index
-	int randomIndex = rand() % questions.size();
-	// Output the random question
-	cout << "You ask: " << questions[randomIndex] << endl;
-}
+int main() {
 
+    int life = 3;  // Player starts with 3 lives
+    int score = 0; // Player starts with 0 points
+    string userInput;
+    
+    //intro message
+    cout << "Welcome to the Labyrinth of Truths and Lies!" << endl;
+    cout << "Your journey begins here:\n[type 'S' to start] or [type 'Q' to quit]" << endl;
+    cin >> userInput;
+    
+    
+    //loop for the main path selection
+    while (userInput != "Q") {
+        
+        //Selections for Two team members each
+        cout << "You have entered the labyrinth.\n";
+        cout << "A sentry stands before you, ready to challenge your wisdom.\n";
+        cout << "Choose a sentry to ask a question:\n";
+		cout << "1. Sentries (Kelvin & Charlese)\n";
+		cout << "2. Sentries  (Jasmyn & Zlata)\n";
+		cout << "3. Sentries (KJ & Monte)\n";
+		cout << "4. Sentry 2 (Jasmyn & Zlata)\n";
+		cout << "Select a sentry path\n Enter any number '1' to '4' to select a sentry path, or 'Q' to quit.\n";
+		
+		int selection;
+        cin >> selection;
+        
+        if(selection == "Q"||"q"){
+            cout<<"End of Game \n view results below:\n"
+            break;
+        }
+        
+        //first path
+        if(selection == 1){
+            int result = askRandomQuestion1();
+            if (result == 10) {
+            score += 10; // Increase score
+            } 
+            else {
+                life--; // Decrease life
+            }
+        }
+        
+        //Second path
+        //Third path
+        //Fourth Path
 
+        cout << "Current Score: " << score << " | Remaining Lives: " << life << endl;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+        if (life <= 0) {
+            cout << "Game Over! You have lost all your lives.\n view results below:\n" << endl;
+            break;
+        }
+
+        cout << "Would you like to continue? [type 'S' to continue] or [type 'Q' to quit]\n";
+        cin >> userInput;
+    }
+
+    cout << "Final Score: " << score << ". Thanks for playing!\n";
+    return 0;
 }
