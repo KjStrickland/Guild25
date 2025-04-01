@@ -48,6 +48,38 @@ static int askRandomQuestion1() {
 }
 
 //static int askRandomQuestion2()
+static int askRandomQuestion2() {
+    // Define two sets of questions
+    vector<string> questionsSet1 = { "Mario's hat is blue", "Abraham Lincoln was the best president", "Lebron James is the best player in the NBA", "Spongebob is small", "FIFA is better than Rocket League" };
+    vector<string> questionsSet2 = { "The Man's name is Steve", "The man will have a son at 29", "The woman hates the man", "The man will kill the woman",  "The woman is the man's sister" };
+
+    // This code merges both question sets into one
+    vector<string> allQuestions = questionsSet1;
+    allQuestions.insert(allQuestions.end(), questionsSet2.begin(), questionsSet2.end());
+
+    // Randomly select a question
+    srand(time(0));
+    int randomIndex = rand() % allQuestions.size();
+    cout << "It asks: " << allQuestions[randomIndex] << " \n[type 'T' for Truth] or [type 'F' for False]" << endl;
+
+    // Randomly generate a true or false response
+    vector<string> answers = { "T", "F" };
+    int randomAnswerIndex = rand() % answers.size();
+
+    // User input
+    string userAnswer;
+    cin >> userAnswer;
+
+    // Compare user input with generated answer
+    if (userAnswer == answers[randomAnswerIndex]) {
+        cout << "Congratulations! You have cleared one path.\n";
+        return 10; // Accumulate 10 points for a correct answer
+    } else {
+        cout << "Sorry, wrong answer.\n";
+        return -1; // Deduct one life for a wrong answer
+    }
+}
+
 //static int askRandomQuestion3()
 //static int askRandomQuestion4()
 
