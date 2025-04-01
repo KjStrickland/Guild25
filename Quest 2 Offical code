@@ -48,8 +48,41 @@ static int askRandomQuestion1() {
 }
 
 //static int askRandomQuestion2()
+
 //static int askRandomQuestion3()
-//static int askRandomQuestion4()
+
+static int askRandomQuestion4() {
+    // Define two sets of questions
+    vector<string> questionsSet1 = { "I was Team Captain", "I drove past the speed limit" }; // Jasmyn change these statements to your own 
+    vector<string> questionsSet2 = { "I like soggy cereal", "I'm allergic to peanuts", }
+    };
+
+    // This code merges both question sets into one
+    vector<string> allQuestions = questionsSet1;
+    allQuestions.insert(allQuestions.end(), questionsSet2.begin(), questionsSet2.end());
+
+    // Randomly select a question
+    srand(time(0));
+    int randomIndex = rand() % allQuestions.size();
+    cout << "It asks: " << allQuestions[randomIndex] << " \n[type 'T' for Truth] or [type 'F' for False]" << endl;
+
+    // Randomly generate a true or false response
+    vector<string> answers = { "T", "F" };
+    int randomAnswerIndex = rand() % answers.size();
+
+    // User input
+    string userAnswer;
+    cin >> userAnswer;
+
+    // Compare user input with generated answer
+    if (userAnswer == answers[randomAnswerIndex]) {
+        cout << "Congratulations! You have cleared one path.\n";
+        return 10; // Accumulate 10 points for a correct answer
+    } else {
+        cout << "Sorry, wrong answer.\n";
+        return -1; // Deduct one life for a wrong answer
+    }
+}
 
 int main() {
 
